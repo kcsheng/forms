@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="1" max="200" />
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" min="2021-06-05" />
+      </div>
+      <div>
+        <label>
+          Password:
+          <input type="password" name="password" required />
+        </label>
+      </div>
+      <!-- checkbox can be used for multiple selection, results are shown as "on" -->
+      <div>
+        Favourite foods:
+        <div>
+          <label for="banana">Banana</label>
+          <input type="checkbox" name="banana" id="banana" />
+        </div>
+        <div>
+          <label for="apple">Apple</label>
+          <input type="checkbox" name="apple" id="apple" />
+        </div>
+      </div>
+      <!-- radiobox can be used for one selection, notice the name and value fields-->
+      <div>
+        Gender:
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" />
+        </div>
+        <div>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female" />
+        </div>
+        <div>
+          <label for="neither">Neither</label>
+          <input type="radio" name="gender" id="neither" value="neither" />
+        </div>
+      </div>
+      <!-- dropdown menu: select - you could use label instead of inner text, also notice multiple option by holding down control key-->
+      <div>
+        <label for="eyecolor">Eye color:</label>
+        <select name="eyecolor" id="eyecolor" multiple>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option label="brown" value="brown"></option>
+        </select>
+      </div>
+
+      <div>
+        <label for="bio">Your Bio:</label>
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+      </div>
+      <!-- hidden input is useful for doing somethng fancy using javascript-->
+      <input type="hidden" name="hidden" value="secret" />
+
+      <div>
+        <!--File needs enctype specified at form tag to enable reading multiple parts-->
+        <label for="file">File</label>
+        <input type="file" id="file" name="file" />
+      </div>
+      <!--Phone input.. this will dish out the number key automatically on mobile device-->
+      <div>
+        <label for="phoneNumber">Phone number:</label>
+        <input type="tel" id="phoneNumbe" name="phone" />
+      </div>
+      <!-- The url also dishes out the alphabetic keyboard for mobile devices-->
+      <div>
+        <label for="url">Your URL:</label>
+        <input type="url" name="url" id="url" />
+      </div>
+      <div>
+        <!-- Present the colour selector-->
+        <label for="colour">Colour:</label>
+        <input type="color" name="colour" id="colour" />
+      </div>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
